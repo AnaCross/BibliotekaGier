@@ -3,18 +3,13 @@ package pl.sternik.project.logic;
 import java.util.ArrayList;
 import java.util.List;
 
-import pl.sternik.project.database.GameState;
-
-public class ChangeGame implements IGame {
-	List<Game> changeGame = new ArrayList<>();
+public class CollectionGame implements IGame {
+	List<Game> collectionGame = new ArrayList<>();
 	
-	public ChangeGame(List<Game> list){
-		for(Game i : list){
-			if(i.getState().equals(GameState.CHANGE)){
-				changeGame.add(i);
-			}
-		}
+	public CollectionGame(List<Game> list){
+		collectionGame = list;
 	}
+	
 	@Override
 	public void updateGame(Integer iD) {
 		// TODO Auto-generated method stub
